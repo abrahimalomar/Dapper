@@ -11,9 +11,9 @@ namespace DapperORMProject
     {
         static void Main(string[] args)
         {
-            //C:\Users\30698\source\Advanced\DapperORMProject\DapperORMProject
+       
             var configuration = new ConfigurationBuilder()
-                                .AddJsonFile(@"C:\Users\30698\source\Advanced\DapperORMProject\DapperORMProject\appsettings.json") // Replace with the actual path to your appsettings.json file
+                                .AddJsonFile("appsettings.json") 
                                 .Build();
 
             IDbConnection db = new SqlConnection(configuration.GetConnectionString("DefaultConnection"));
