@@ -12,10 +12,8 @@ namespace DapperORMProject
         {
 
             var configuration = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-    .Build();
-
-
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .Build();
             return new SqlConnection(configuration.GetConnectionString("DefaultConnection"));
         }
 
